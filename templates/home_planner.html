@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}Home Interior Planner | PocketSmart AI{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+
+    <span class="badge">Home Interior Planner</span>
+
+    <h1>Plan your space within your budget</h1>
+
+    <p>
+        Tell us your budget and preferred style to receive
+        a smart interior recommendation.
+    </p>
+
+</section>
+
+
+<section class="planner-card">
+
+    <form id="home-form">
+
+        <label for="budget">Budget (₹)</label>
+
+        <input
+            type="number"
+            id="budget"
+            name="budget"
+            min="1"
+            placeholder="Example: 75000"
+            required
+        >
+
+
+        <label for="room_type">Room Type</label>
+
+        <select id="room_type" name="room_type" required>
+
+            <option value="">Select room</option>
+            <option value="Living Room">Living Room</option>
+            <option value="Bedroom">Bedroom</option>
+            <option value="Kitchen">Kitchen</option>
+            <option value="Dining Room">Dining Room</option>
+            <option value="Office">Home Office</option>
+
+        </select>
+
+
+        <label for="style">Style</label>
+
+        <select id="style" name="style" required>
+
+            <option value="">Select style</option>
+            <option value="Minimal">Minimal</option>
+            <option value="Modern">Modern</option>
+            <option value="Elegant">Elegant</option>
+            <option value="Traditional">Traditional</option>
+
+        </select>
+
+
+        <label for="location">Location</label>
+
+        <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="Example: Kochi"
+        >
+
+
+        <button
+            type="submit"
+            class="btn btn-primary btn-full"
+        >
+            Generate Recommendation
+        </button>
+
+    </form>
+
+</section>
+
+
+<section id="recommendation-result" class="result-section">
+
+</section>
+
+{% endblock %}

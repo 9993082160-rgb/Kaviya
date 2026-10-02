@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-header">
+    <h1>Shopping & Product Discovery</h1>
+    <p>Find products that match your budget and preferences.</p>
+</section>
+
+<section class="planner-card">
+    <form id="shopping-form">
+
+        <div class="form-group">
+            <label for="shopping-category">What are you looking for?</label>
+            <input
+                type="text"
+                id="shopping-category"
+                placeholder="Example: sofa, necklace, party decoration"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="shopping-budget">Your Budget (₹)</label>
+            <input
+                type="number"
+                id="shopping-budget"
+                min="1"
+                placeholder="Example: 25000"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="shopping-platform">Preferred Platform</label>
+            <select id="shopping-platform">
+                <option value="">Any Platform</option>
+                <option value="Amazon">Amazon</option>
+                <option value="Flipkart">Flipkart</option>
+                <option value="IKEA">IKEA</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn-primary">
+            Find Products
+        </button>
+
+    </form>
+</section>
+
+<section id="shopping-results" class="recommendation-section">
+</section>
+
+{% endblock %}
