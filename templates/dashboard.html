@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard | PocketSmart AI{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+
+    <span class="badge">Dashboard</span>
+
+    <h1>Welcome to PocketSmart AI</h1>
+
+    <p>
+        Choose a planner and get recommendations based on your budget.
+    </p>
+
+</section>
+
+
+<section class="feature-grid">
+
+    <div class="feature-card">
+        <div class="feature-icon">🏠</div>
+
+        <h3>Home Interior Planner</h3>
+
+        <p>
+            Plan your room and interior spending according to your budget.
+        </p>
+
+        <a href="/home-planner" class="btn btn-primary">
+            Start Planning
+        </a>
+    </div>
+
+
+    <div class="feature-card">
+        <div class="feature-icon">🎉</div>
+
+        <h3>Party Planner</h3>
+
+        <p>
+            Create a practical event budget for your next celebration.
+        </p>
+
+        <a href="/party-planner" class="btn btn-primary">
+            Plan Party
+        </a>
+    </div>
+
+
+    <div class="feature-card">
+        <div class="feature-icon">💎</div>
+
+        <h3>Jewelry Advisor</h3>
+
+        <p>
+            Find jewelry recommendations that fit your occasion and budget.
+        </p>
+
+        <a href="/jewelry-planner" class="btn btn-primary">
+            Find Jewelry
+        </a>
+    </div>
+    <div class="feature-card">
+       <div class="feature-icon">🛒</div>
+
+       <h3>Shopping & Product Discovery</h3>
+
+       <p>
+           Discover products that match your needs, preferences, and budget.
+       </p>
+
+       <a href="/shopping" class="btn btn-primary">
+           Find Products
+        </a>
+    </div>
+
+    <div class="feature-card">
+        <div class="feature-icon">📋</div>
+
+        <h3>Recommendation History</h3>
+
+        <p>
+            View your previous PocketSmart AI recommendations.
+        </p>
+
+        <a href="/history" class="btn btn-secondary">
+            View History
+        </a>
+    </div>
+
+</section>
+
+{% endblock %}

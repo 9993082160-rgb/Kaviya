@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}Party Planner | PocketSmart AI{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+
+    <span class="badge">Party Planner</span>
+
+    <h1>Plan your celebration within your budget</h1>
+
+    <p>
+        Enter your event details and PocketSmart AI will suggest
+        a practical budget plan.
+    </p>
+
+</section>
+
+
+<section class="planner-card">
+
+    <form id="party-form">
+
+        <label for="budget">Budget (₹)</label>
+
+        <input
+            type="number"
+            id="budget"
+            name="budget"
+            min="1"
+            placeholder="Example: 30000"
+            required
+        >
+
+
+        <label for="event_type">Event Type</label>
+
+        <select id="event_type" name="event_type" required>
+
+            <option value="">Select event</option>
+            <option value="Birthday">Birthday</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Get-together">Get-together</option>
+            <option value="Anniversary">Anniversary</option>
+            <option value="Corporate Event">Corporate Event</option>
+
+        </select>
+
+
+        <label for="guests">Number of Guests</label>
+
+        <input
+            type="number"
+            id="guests"
+            name="guests"
+            min="1"
+            placeholder="Example: 50"
+            required
+        >
+
+
+        <label for="location">Location</label>
+
+        <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="Example: Kochi"
+        >
+
+
+        <button
+            type="submit"
+            class="btn btn-primary btn-full"
+        >
+            Generate Party Plan
+        </button>
+
+    </form>
+
+</section>
+
+
+<section id="recommendation-result" class="result-section">
+
+</section>
+
+{% endblock %}
